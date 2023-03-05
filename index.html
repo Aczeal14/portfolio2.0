@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Aczeal</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/f9204bbde3.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" alt="logo" class="logo"/>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>        
+      </div>
+      <div class="header-text">
+        <p>Full Stack Web Developer</p>
+        <h1>Hi, I'm <span>Joshua</span><br/>from Philippines</h1>
+      </div>
+    </header>    
+    <article>
+      <!----------about--------------->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="https://scontent.fceb1-2.fna.fbcdn.net/v/t39.30808-6/277223905_143665288167271_2651596302627373510_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeE4tMO4U_DCpBOxjjxxXfsTH5OB0DbTAQ4fk4HQNtMBDj5XnywEiloDGOK6Sd_kuPX9iAlI0np9Wy90kKX5xb0T&_nc_ohc=4EEUy7rzzsQAX-y03By&_nc_ht=scontent.fceb1-2.fna&oh=00_AfBeBBWHAOQbXW2piJLOh28yd5cxai2246bDppC6Ykq5KA&oe=640A370B" alt="owner's image"/>
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About Me</h1>
+              <p>I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I am able to work well under pressure and adhere to strict deadlines.</p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>UI/UX</span><br/>Web Design</li>
+                  <li><span>Web Development</span><br/>Web app development</li>
+                  <li><span>App Development</span><br/>Building Android/iOS app</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>None</span><br/></li>                  
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>OnGoing(2023)</span><br/>KodeGo Full Stack Development(Part-Time) bootcamp.</li>     
+                </ul>
+              </div>
+            </div>
+          </div>          
+        </div>        
+      </section>
+      <!--------Services-------------->
+      <section id="services">
+        <div class="container">
+          <h1 class="sub-title">My Services</h1>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Web Design</h2>
+              <p>Full stack developers are computer programmers who are proficient in both front and back end coding. Their primary responsibilities include designing user interactions on websites, developing servers, and databases for website functionality, and coding for mobile platforms.</p>
+              <a href="#">Learn More</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-crop"></i>
+              <h2>UI/UX Design</h2>
+              <p>Full stack developers are computer programmers who are proficient in both front and back end coding. Their primary responsibilities include designing user interactions on websites, developing servers, and databases for website functionality, and coding for mobile platforms.</p>
+              <a href="#">Learn More</a>
+            </div>
+            <div>
+              <i class="fa-brands fa-app-store"></i>
+              <h2>App Design</h2>
+              <p>Full stack developers are computer programmers who are proficient in both front and back end coding. Their primary responsibilities include designing user interactions on websites, developing servers, and databases for website functionality, and coding for mobile platforms.</p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+
+</html>
