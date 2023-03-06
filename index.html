@@ -14,17 +14,19 @@
       <div class="container">
         <nav>
           <img src="images/logo.png" alt="logo" class="logo"/>
-          <ul>
+          <ul id="sidemenu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>        
       </div>
       <div class="header-text">
-        <p>Full Stack Web Developer</p>
+        <p>Aspiring Full Stack Developer</p>
         <h1>Hi, I'm <span>Joshua</span><br/>from Philippines</h1>
       </div>
     </header>    
@@ -45,8 +47,7 @@
                 <p class="tab-links" onclick="opentab('education')">Education</p>
               </div>
               <div class="tab-contents active-tab" id="skills">
-                <ul>
-                  <li><span>UI/UX</span><br/>Web Design</li>
+                <ul>                  
                   <li><span>Web Development</span><br/>Web app development</li>
                   <li><span>App Development</span><br/>Building Android/iOS app</li>
                 </ul>
@@ -73,28 +74,95 @@
             <div>
               <i class="fa-solid fa-code"></i>
               <h2>Web Design</h2>
-              <p>Full stack developers are computer programmers who are proficient in both front and back end coding. Their primary responsibilities include designing user interactions on websites, developing servers, and databases for website functionality, and coding for mobile platforms.</p>
+              <p><.......>.</p>
               <a href="#">Learn More</a>
-            </div>
-            <div>
-              <i class="fa-solid fa-crop"></i>
-              <h2>UI/UX Design</h2>
-              <p>Full stack developers are computer programmers who are proficient in both front and back end coding. Their primary responsibilities include designing user interactions on websites, developing servers, and databases for website functionality, and coding for mobile platforms.</p>
-              <a href="#">Learn More</a>
-            </div>
+            </div>            
             <div>
               <i class="fa-brands fa-app-store"></i>
               <h2>App Design</h2>
-              <p>Full stack developers are computer programmers who are proficient in both front and back end coding. Their primary responsibilities include designing user interactions on websites, developing servers, and databases for website functionality, and coding for mobile platforms.</p>
+              <p><.......>.</p>
               <a href="#">Learn More</a>
             </div>
           </div>
         </div>
       </section>
+      <!--------Portfolio------------->
+      <section id="portfolio">
+        <div class="container">
+          <h1 class="sub-title">My Work</h1>
+          <div class="work-list">
+            <div class="flip-card">
+              <div class="card-inner">
+                <div class="front">
+                  <a href="#"><img src="images/work-1.png" alt="work example"/></a>
+                </div>
+                <div class="back">
+                  <h3>Social Media App</h3>
+                  <p>This app connects you to all the talented people in the world.</p>       
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="card-inner">
+                <div class="front">
+                  <a href="#"><img src="images/work-2.png" alt="work example"/></a>
+                </div>
+                <div class="back">
+                  <h3>Music App</h3>
+                  <p>Listen to your fovorite music all day long for free.</p>                
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="card-inner">
+                <div class="front">
+                  <a href="#"><img src="images/work-3.png" alt="work example"/></a>
+                </div>
+                <div class="back">
+                  <h3>Online Shopping App</h3>
+                  <p>Want to shop in the confort of tour home? Download this app now.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn">See More</a>
+        </div>
+      </section>
+      <!----------Contact------------->
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-sharp fa-solid fa-paper-plane"></i>gaczeal@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i>09663571356</p>
+              <section class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100075714011468&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.youtube.com/@Aczeal" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/Aczeal14" target="_blank"><i class="fa-brands fa-square-git"></i></a>
+                <a href="https://paypal.me/Aczeal14" target="_blank"><i class="fa-brands fa-cc-paypal"></i></a>
+              </section>
+              <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+              <form>
+                <input name="name" placeholder="Name" required>
+                <input name="email" placeholder="name@example.com" required/>
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="send" class="btn btn2">Send Message</button>
+              </form>             
+          </div>
+        </div>
+      </section>
+      <!----------CopyRight------------->
+      <section id="copyright">
+        <p>Copyright &copy Aczeal</p>
+      </section>
     </article>
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
+      var sidemenu = document.getElementById("sidemenu");
 
       function opentab(tabname){
         for(tablink of tablinks){
@@ -105,6 +173,14 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+      }
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
       }
     </script>
   </body>
